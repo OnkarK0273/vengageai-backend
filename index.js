@@ -1,6 +1,7 @@
 const express = require("express")
 const cores = require("cors");
 const connect = require("./config/db");
+const contactRouter = require("./route/contactRouter");
 
 
 // create express app
@@ -11,7 +12,7 @@ app.use(express.json());
 app.use(cores())
 
 
-
+app.use("/contect",contactRouter)
 
 // mongoDB connection
 

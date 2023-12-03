@@ -9,8 +9,7 @@ const contactSchema = new mongoose.Schema({
       type: String,
       required: true,
       validate: {
-        validator: function (value) {
-          
+        validator: function (value) {          
           return /^\d{10}$/.test(value);
         },
         message: 'Invalid phone number format',
@@ -20,7 +19,7 @@ const contactSchema = new mongoose.Schema({
     versionKey:false
 });
 
-// creating modal
+// creating mod
 
 const contactModal = mongoose.model("contact",contactSchema)
 
